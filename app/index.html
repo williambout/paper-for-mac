@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Paper</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body style="-webkit-app-region: drag">
+	<div class="drageable-area"></div>
+	<div id="loader">
+		<div class="loader-container">
+			<img class="loader-icon" src="./img/loader.png" srcset="./img/loader.png 95w, ./img/loader@2x.png 190w" width="95" height="95" alt="">
+		</div>
+	</div>
+	<webview id="paper" src="https://paper.dropbox.com/" autosize="on" preload="./js/inject.js"></webview>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+#paper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.drageable-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  -webkit-app-region: drag;
+  z-index: 10;
+}
+
+#loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #F7F9FA;
+  opacity: 0;
+  transition: opacity .2s ease;
+  pointer-events: none;
+  will-change: opacity;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-container {
+  display: inline-flex;
+  border-radius: 50%;
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.03);
+}
+
+#loader.-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#loader.-active .loader-icon {
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  0%   { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
+}
+
+body, html, #app-container, .hp-app-container, #listSidebar, .hp-sidebar-container {
+    background-color: transparent!important
+}
+
+.hp-page-pad-list, #padpage-container {
+    background-color: white!important;
+}
+
+.hp-non-pad-page {
+    padding-left: 0!important;
+    margin-left: 240px;
+    padding-right: 240px;
+}
+
+.hp-page {
+    transition: none!important;
+}
+
+.header-pad-title-and-folder {
+    left: 80px!important;
+}
+
+.hp-header-back-button {
+    margin: 22px 4px 9px !important;
+}
+
+.hp-account-switcher-button {
+    border-top: 1px solid rgba(0, 0, 0, 0.1)!important;
+}
+
+.hp-account-switcher-button span, .hp-sidebar-tab {
+  color: rgba(0,0,0,0.4)!important;
+}
+
+.hp-account-switcher-button span, .hp-sidebar-tab.hp-sidebar-tab-active {
+  color: #0070e0!important;
+}
+
+.hp-sidebar-top {
+  display: none;
+}
+
+.hp-sidebar {
+  padding-top: 40px;
+}
