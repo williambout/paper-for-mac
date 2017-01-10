@@ -7,8 +7,8 @@
     "package": "electron-packager ./ Paper --out ./build/ --overwrite --icon=./app/img/icon.icns"
   },
   "devDependencies": {
-    "electron-packager": "^8.4.0",
-    "electron-prebuilt": "^ 1.4.13"
+    "electron": "^1.4.14",
+    "electron-packager": "^8.4.0"
   },
   "dependencies": {
     "nconf": "^0.8.4"
