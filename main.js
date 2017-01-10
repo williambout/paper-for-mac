@@ -8,10 +8,8 @@ win = null;
 const menuTemplate = require('./menu');
 
 function createWindow () {
-
   let appMenu = Menu.buildFromTemplate(menuTemplate);
   Menu.setApplicationMenu(appMenu);
-
   win = new BrowserWindow(
     {
       width: 1024,
@@ -29,9 +27,9 @@ function createWindow () {
   win.on('closed', () => {
     win = null
   })
-
   return win;
 }
+
 app.on('ready', () => {
 	mainWindow = createWindow();
 });
