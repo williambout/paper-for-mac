@@ -6,7 +6,7 @@
 
 ## Download
 
-[Paper for Mac](https://github.com/williambout/paper-for-mac/releases/download/0.1.0/Paper.app.zip)
+[Paper for Mac](https://github.com/williambout/paper-for-mac/releases/download/0.1.1/Paper.app.zip)
 
 ## Build
 
