@@ -34,14 +34,8 @@ app.on('ready', () => {
 	mainWindow = createWindow();
 });
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
-});
-
-app.on('activate', () => {
-  if (mainWindow === null) {
-    createWindow()
+app.on('activate', (event, hasVisibleWindows) => {
+  if (!hasVisibleWindows) {
+    createWindow();
   }
 });
