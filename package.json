@@ -11,6 +11,7 @@
     "electron-packager": "^8.4.0"
   },
   "dependencies": {
+    "electron-window-state": "^4.0.1",
     "nconf": "^0.8.4"
   }
 }

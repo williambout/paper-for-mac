@@ -1,7 +1,8 @@
-const {app, shell, Menu, BrowserWindow} = require('electron')
-const path = require('path')
-const url = require('url')
-const fs = require('fs')
+const {app, shell, Menu, BrowserWindow} = require('electron');
+const path = require('path');
+const url = require('url');
+const fs = require('fs');
+const windowStateKeeper = require('electron-window-state');
 
 let mainWindow;
 win = null;
@@ -10,17 +11,24 @@ const menuTemplate = require('./menu');
 function createWindow () {
   let appMenu = Menu.buildFromTemplate(menuTemplate);
   Menu.setApplicationMenu(appMenu);
-  win = new BrowserWindow(
-    {
-      width: 1024,
-      height: 700,
-      titleBarStyle: 'hidden',
-      vibrancy: 'light',
-      minWidth: 800,
-      minHeight: 600,
 
-    }
-  )
+  let mainWindowState = windowStateKeeper({
+    defaultWidth: 1024,
+    defaultHeight: 700
+  });
+
+  win = new BrowserWindow({
+    x: mainWindowState.x,
+    y: mainWindowState.y,
+    width: mainWindowState.width,
+    height: mainWindowState.height,
+    titleBarStyle: 'hidden',
+    vibrancy: 'light',
+    minWidth: 800,
+    minHeight: 600,
+  });
+
+  mainWindowState.manage(win);
 
   win.loadURL('file://' + __dirname + '/app/index.html');
 
