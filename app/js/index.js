@@ -7,7 +7,6 @@ const loader = document.getElementById('loader');
 
 webview.addEventListener('dom-ready', () => {
   webview.insertCSS(fs.readFileSync(path.join(__dirname, '/css/main.css'), 'utf8'));
-  webview.openDevTools();
 });
 
 webview.addEventListener('new-window', (event) => {

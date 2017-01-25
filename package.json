@@ -7,11 +7,10 @@
     "package": "electron-packager ./ Paper --out ./build/ --overwrite --icon=./app/img/icon.icns"
   },
   "devDependencies": {
-    "electron": "^1.4.14",
-    "electron-packager": "^8.4.0"
+    "electron": "^1.4.15",
+    "electron-packager": "^8.5.1 "
   },
   "dependencies": {
-    "electron-window-state": "^4.0.1",
-    "nconf": "^0.8.4"
+    "electron-window-state": "^4.0.1"
   }
 }
