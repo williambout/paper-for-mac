@@ -5,8 +5,9 @@ const {shell} = require('electron');
 const webview = document.getElementById('paper');
 const loader = document.getElementById('loader');
 
-webview.addEventListener('dom-ready', function(){
+webview.addEventListener('dom-ready', () => {
   webview.insertCSS(fs.readFileSync(path.join(__dirname, '/css/main.css'), 'utf8'));
+  webview.openDevTools();
 });
 
 webview.addEventListener('new-window', (event) => {
@@ -14,11 +15,11 @@ webview.addEventListener('new-window', (event) => {
   shell.openExternal(event.url);
 });
 
-webview.addEventListener('did-start-loading', function(){
+webview.addEventListener('did-start-loading', () => {
   loader.classList.add('-active');
 });
 
-webview.addEventListener('did-stop-loading', function(){
+webview.addEventListener('did-stop-loading', () => {
   loader.classList.remove('-active');
 });
 
