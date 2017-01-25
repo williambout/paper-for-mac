@@ -21,3 +21,5 @@ webview.addEventListener('did-start-loading', function(){
 webview.addEventListener('did-stop-loading', function(){
   loader.classList.remove('-active');
 });
+
+window.addEventListener('focus', () => webview.focus());
