@@ -12,7 +12,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 20px;
+  height: 30px;
   -webkit-app-region: drag;
   z-index: 10;
 }
@@ -54,26 +54,26 @@
   100% { transform: rotate(360deg) }
 }
 
-body, html, #app-container, .hp-app-container, #listSidebar, .hp-sidebar-container {
-    background-color: transparent!important
+body, html, #app-container, .hp-app-container, #listSidebar, .hp-sidebar-container, .maestro-nav__container {
+    background-color: transparent !important
 }
 
 .hp-page-pad-list, #padpage-container {
-    background-color: white!important;
+    background-color: white !important;
 }
 
 .hp-non-pad-page {
-    padding-left: 0!important;
+    padding-left: 0 !important;
     margin-left: 240px;
     padding-right: 240px;
 }
 
 .hp-page {
-    transition: none!important;
+    transition: none !important;
 }
 
 .header-pad-title-and-folder {
-    left: 80px!important;
+    left: 80px !important;
 }
 
 .hp-header-back-button {
@@ -81,7 +81,7 @@ body, html, #app-container, .hp-app-container, #listSidebar, .hp-sidebar-contain
 }
 
 .hp-account-switcher-button {
-    border-top: 1px solid rgba(0, 0, 0, 0.1)!important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
 .hp-account-switcher-button span, .hp-sidebar-tab {
@@ -89,13 +89,22 @@ body, html, #app-container, .hp-app-container, #listSidebar, .hp-sidebar-contain
 }
 
 .hp-account-switcher-button span, .hp-sidebar-tab.hp-sidebar-tab-active {
-  color: #0070e0!important;
+  color: #0070e0 !important;
 }
 
-.hp-sidebar-top {
-  display: none;
+.hp-sidebar-top, .maestro-nav__home-button {
+  display: none !important;
 }
 
-.hp-sidebar {
-  padding-top: 40px;
+.maestro-nav-switcher-button {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  border-top: none !important;
+}
+
+.maestro-nav-switcher-button__content {
+  border-top: none !important;
+}
+
+.maestro-nav__features-header small {
+  color: rgba(0, 0, 0, 0.3) !important;
 }
