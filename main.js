@@ -3,6 +3,7 @@ const path = require('path');
 const url = require('url');
 const fs = require('fs');
 const windowStateKeeper = require('electron-window-state');
+const {moveToApplications} = require('electron-lets-move');
 
 let mainWindow;
 win = null;
@@ -39,6 +40,7 @@ function createWindow () {
 }
 
 app.on('ready', () => {
+  moveToApplications();
 	mainWindow = createWindow();
 });
 
