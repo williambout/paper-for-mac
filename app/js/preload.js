@@ -19,8 +19,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   notificationIndicator.addEventListener('DOMCharacterDataModified', function(event) {
     setBadge(event.newValue);
-    if (event.prevValue < 1)
-      remote.app.dock.bounce('informational');
   });
 
   function setBadge(newValue) {
