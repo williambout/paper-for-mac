@@ -6,7 +6,7 @@
 
 ## Download
 
-[Paper for Mac](https://github.com/williambout/paper-for-mac/releases/download/v0.1.6/Paper.app.zip)
+[Paper for Mac](https://paper-updates.herokuapp.com/download/darwin_64)
 
 ## Build
 
