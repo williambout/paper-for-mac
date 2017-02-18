@@ -1,3 +1,5 @@
+const {appUpdater} = require('./autoupdater');
+
 module.exports = [
   {
     label: 'Paper',
@@ -5,6 +7,12 @@ module.exports = [
       {
         label: 'About Paper',
         selector: 'orderFrontStandardAboutPanel:'
+      },
+      {
+        label: 'Check for Update',
+        click() {
+          appUpdater();
+        }
       },
       { type: 'separator' },
       {

@@ -4,6 +4,9 @@ const url = require('url');
 const fs = require('fs');
 const windowStateKeeper = require('electron-window-state');
 const {moveToApplications} = require('electron-lets-move');
+const {appUpdater} = require('./autoupdater');
+
+var isDevelopment = process.env.NODE_ENV === 'development';
 
 let mainWindow;
 win = null;
@@ -40,8 +43,11 @@ function createWindow () {
 }
 
 app.on('ready', () => {
-  moveToApplications();
-	mainWindow = createWindow();
+  mainWindow = createWindow();
+  if (!isDevelopment) {
+    moveToApplications();
+    appUpdater();
+  }
 });
 
 app.on('activate', (event, hasVisibleWindows) => {
