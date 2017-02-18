@@ -11,7 +11,7 @@ module.exports = [
       {
         label: 'Check for Update',
         click() {
-          appUpdater();
+          appUpdater('manual');
         }
       },
       { type: 'separator' },
