@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     setBadge(notificationIndicator.textContent);
   }, 200);
 
-  notificationIndicator.addEventListener('DOMCharacterDataModified', function(event) {
+  notificationIndicator.addEventListener('DOMCharacterDataModified', (event) => {
     setBadge(event.newValue);
   });
 
