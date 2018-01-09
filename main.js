@@ -27,6 +27,7 @@ function createWindow () {
     width: mainWindowState.width,
     height: mainWindowState.height,
     titleBarStyle: 'hidden',
+    transparent: true,
     vibrancy: 'light',
     minWidth: 800,
     minHeight: 600,
